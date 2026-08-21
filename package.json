@@ -3,10 +3,14 @@
 	"private": true,
 	"type": "module",
 	"scripts": {
+		"test": "bun test",
 		"validate-plugins": "node scripts/validate-plugins.mjs",
 		"check-pstack-portability": "node scripts/check-pstack-portability.mjs",
 		"check-pstack-references": "node scripts/check-pstack-references.mjs"
 	},
+	"workspaces": [
+		"orchestrate/skills/orchestrate/scripts"
+	],
 	"devDependencies": {
 		"ajv": "^8.17.1",
 		"ajv-formats": "^3.0.1"
