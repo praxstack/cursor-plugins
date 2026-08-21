@@ -1,0 +1,13 @@
+# progress.txt — PR#9 remediation continuation 2026-08-21T22:06:43Z
+
+[2026-08-22] CONTEXT: session resumed after lost user msg; goal goal-a6380447 armed.
+[2026-08-22] STATE: branch fix/post-merge-review-findings @12935ba == origin; origin/main moved to 4612556 (upstream sync incl docs(pstack)); PR#9 CONFLICTING.
+[2026-08-22] ATOM A1: merge origin/main, resolve conflicts preserving both our remediation and upstream pstack updates.
+[2026-08-22T22:12Z] ATOM A1 DONE: merge 215edb0 committed; conflicts resolved ours(generic)+upstream(additive).
+[2026-08-22T22:12Z] GATES POST-MERGE @215edb0: validate EXIT=0 | portability 44 skills EXIT=0 | references 100 files EXIT=0 | bun tests 52/52,206 expects EXIT=0. Evidence: .agent/evidence/pr9-merge-2026-08-22/
+[2026-08-22] ATOM A2 START: fresh-context code-review over git diff origin/main..HEAD (PR #9 surface); findings -> fix Majors.
+
+[2026-08-22 ~03:50] RESUMED by ox-alpha session (goal goal-0e43b9f0 armed).
+[2026-08-22] T7 VERIFIED: merge 215edb0 (by prior session) already absorbed origin/main 4612556; merge-tree dry-run zero conflicts. Gates re-run @ HEAD post-merge: portability=0 references=0 validate=0, bun test pstack = 52 pass / 0 fail EXIT=0 -> .agent/evidence/pr9-rerun-post-merge-2026-08-22/. NOTE: bare `bun test` (unscoped) discovers 139 tests incl. orchestrate/* failures on missing optional deps (@slack/web-api, zod/v3); orchestrate/ identical to origin/main => pre-existing upstream state, filed as its own issue.
+[2026-08-22] Tickets filed: T7=#11 T8=#12 (markdown mirrors in .scratch/pstack-generic-gates/).
+[2026-08-22] NEXT: fresh-context code review -> push -> PR via gh pr create --repo praxstack/cursor-plugins --base main --head fix/post-merge-review-findings (NEVER upstream; never self-merge).

@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="880" height="420" viewBox="0 0 880 420" font-family="Menlo, Consolas, monospace">
+  <rect width="880" height="420" fill="#0d1117"/>
+  <rect x="24" y="24" width="832" height="64" rx="8" fill="#161b22" stroke="#30363d"/>
+  <text x="44" y="52" fill="#58a6ff" font-size="20" font-weight="bold">pstack-generic · PR #9 QA evidence</text>
+  <text x="44" y="76" fill="#8b949e" font-size="13">post-merge upstream reconciliation · branch fix/post-merge-review-findings @ 215edb0 · 2026-08-21T22:11Z</text>
+
+  <rect x="24" y="112" width="404" height="130" rx="8" fill="#161b22" stroke="#3fb950"/>
+  <text x="44" y="142" fill="#3fb950" font-size="16" font-weight="bold">✔ GATE 1 · validate-plugins.mjs</text>
+  <text x="44" y="168" fill="#c9d1d9" font-size="12">All plugins validated successfully.</text>
+  <text x="44" y="190" fill="#8b949e" font-size="12">exit 0 · incl. pstack-generic manifest + ajv devDeps</text>
+  <text x="44" y="222" fill="#3fb950" font-size="12">AC2 PASS</text>
+
+  <rect x="452" y="112" width="404" height="130" rx="8" fill="#161b22" stroke="#3fb950"/>
+  <text x="472" y="142" fill="#3fb950" font-size="16" font-weight="bold">✔ GATE 2 · check-pstack-portability.mjs</text>
+  <text x="472" y="168" fill="#c9d1d9" font-size="12">44 skills portable, no host or model coupling.</text>
+  <text x="472" y="190" fill="#8b949e" font-size="12">exit 0 · PORTABILITY.md acceptance contract gate 1</text>
+  <text x="472" y="222" fill="#3fb950" font-size="12">AC1 PASS</text>
+
+  <rect x="24" y="266" width="404" height="130" rx="8" fill="#161b22" stroke="#3fb950"/>
+  <text x="44" y="296" fill="#3fb950" font-size="16" font-weight="bold">✔ GATE 3 · check-pstack-references.mjs</text>
+  <text x="44" y="322" fill="#c9d1d9" font-size="12">Checked 100 markdown files under pstack/skills.</text>
+  <text x="44" y="344" fill="#c9d1d9" font-size="12">All skill references resolve. exit 0</text>
+  <text x="44" y="376" fill="#3fb950" font-size="12">AC3 PASS · floor-guard ≥44 + CRLF tolerance active</text>
+
+  <rect x="452" y="266" width="404" height="130" rx="8" fill="#161b22" stroke="#3fb950"/>
+  <text x="472" y="296" fill="#3fb950" font-size="16" font-weight="bold">✔ GATE 4 · bun test pstack</text>
+  <text x="472" y="322" fill="#c9d1d9" font-size="12">52 pass · 0 fail · 206 expect() calls · 4 files</text>
+  <text x="472" y="344" fill="#c9d1d9" font-size="12">889 ms · exit 0</text>
+  <text x="472" y="376" fill="#3fb950" font-size="12">AC4 PASS</text>
+</svg>
