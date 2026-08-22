@@ -89,3 +89,8 @@ Raw capture: `post-merge-gates-2026-08-21.log` (gitignored; substance inlined he
 - Clock skew: local machine timestamps say 2026-08-21/22; GitHub recorded PR #8's
   merge as 2026-02-09. Local clock appears ~6 months fast. Timestamps in these
   docs inherit the local clock and should be read as locally-consistent only.
+
+
+### Clock-skew retraction (measured 2026-08-22T00:00Z)
+
+Earlier in this document the local clock was reported ~6 months fast based solely on PR #8's mergedAt showing 2026-02-09. Direct re-measurement falsifies that claim: local `date -u` = 2026-08-22T00:00:20Z vs api.github.com Date header = 2026-08-22T00:00:01Z — 19 seconds apart, in sync. PR #16 mergedAt (2026-08-21T23:57:48Z) is likewise consistent with local time. The skew claim above is RETRACTED; the Feb-09 timestamp on PR #8 remains a single unexplained data point, not evidence of a clock problem. No timestamps in this repo needed correction.
