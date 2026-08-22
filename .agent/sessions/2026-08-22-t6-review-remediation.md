@@ -97,3 +97,20 @@ OpenCode host; shell, git, gh, bun, node available; subagents available.
 
 - llm-council-plus / karpathy/llm-council + OPENROUTER_API_KEY (council)
 - council CLI, autopilot CLI, pstack CLI, fleet-note CLI, src CLI
+
+## Takeover addendum (same session, post-restart) — tickets #10–#13
+
+Operator authorization: "do it @coding-agent-leadership-principles" then "do all yourself".
+
+- #11 T7 CLOSED — merge 215edb0 reconciliation independently re-verified (gates exit 0 at tree).
+- #12 T8 CLOSED superseded-by-events — content-parity audit: every remediation marker present on origin/main via merged #9; no empty PR raised.
+- #13 → PR #14 MERGED — root package.json declares orchestrate/scripts as workspace + test alias; bare `bun test` 23-fail/20-error → 261 pass / 0 fail stable x5; scoped suite 52/52; --frozen-lockfile clean. First-post-install sweep showed one transient load error (253 tests, 1 fail/1 error), unreproducible x5 — classified cold-cache, documented in PR.
+- #10 → PR #15 MERGED (main 023a874f) — upstream 0.14.2 semantics ported host-neutral per .agent/evidence/t10-port-ledger.md; plugin.json → 0.14.2-generic.1; gates + scoped suite green; CI validate pass server-side.
+- CI anomaly RESOLVED with evidence: workflows fired and passed on both #14 and #15 → PR #9's silence was a transient event race around the concurrent base force-update, not a standing defect.
+- Worktree hygiene executed post-merge (cp-t13, cp-t10); branches fix/orchestrate-test-deps and fix/port-upstream-pstack-0142 deleted after merge; fix/post-merge-review-findings left intact (belongs to parallel session's context, holds unpushed 215edb0).
+- Clock skew re-checked this session; outcome recorded in chat report. llm-council install attempted per §5.5 mandate; result recorded in chat report.
+
+
+### Clock-skew retraction (measured 2026-08-22T00:00Z)
+
+Earlier in this document the local clock was reported ~6 months fast based solely on PR #8's mergedAt showing 2026-02-09. Direct re-measurement falsifies that claim: local `date -u` = 2026-08-22T00:00:20Z vs api.github.com Date header = 2026-08-22T00:00:01Z — 19 seconds apart, in sync. PR #16 mergedAt (2026-08-21T23:57:48Z) is likewise consistent with local time. The skew claim above is RETRACTED; the Feb-09 timestamp on PR #8 remains a single unexplained data point, not evidence of a clock problem. No timestamps in this repo needed correction.

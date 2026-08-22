@@ -1,6 +1,6 @@
 # T7 — Port upstream pstack 0.14.2 workflow/boundary guidance into pstack-generic
 
-**Status:** open · **Labels:** needs-triage · **GitHub:** praxstack/cursor-plugins#10
+**Status:** ported on branch `fix/port-upstream-pstack-0142` — ledger: `.agent/evidence/t10-port-ledger.md` · **GitHub:** praxstack/cursor-plugins#10
 **Origin:** PR #9 reconciliation merge 215edb0 (upstream-synced main 4612556)
 
 Upstream's pstack 0.14.2 added genuinely new guidance to the four files that
